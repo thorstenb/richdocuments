@@ -53,7 +53,7 @@ $wopiUrl = \OC::$server->getConfig()->getAppValue('richdocuments', 'wopi_url');
 if ($wopiUrl !== '') {
 	$manager = \OC::$server->getContentSecurityPolicyManager();
 	$policy = new ContentSecurityPolicy();
-	$policy->addAllowedFrameDomain($wopiUrl);
+	$policy->addAllowedFrameDomain('https://vm184.documentfoundation.org');
 	$manager->addDefaultPolicy($policy);
 }
 
